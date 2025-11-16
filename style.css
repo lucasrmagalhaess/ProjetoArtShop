@@ -1,0 +1,188 @@
+/* style.css */
+
+/* 1. RESET BÁSICO */
+/* Remove margens e preenchimentos padrão e define box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total do elemento */
+    font-family: sans-serif; /* Define uma fonte padrão */
+}
+
+body {
+    background-color: #f4f4f4; /* Cor de fundo suave para o corpo do site */
+    color: #333; /* Cor de texto padrão */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none; /* Remove sublinhado de links */
+    color: inherit; /* Links herdam a cor do texto do elemento pai */
+}
+
+/* 2. ESTILIZAÇÃO DO HEADER (Cabeçalho) */
+header {
+    /* Requisito Geral: Menu de opções header com navbar e botões [cite: 7] */
+    background: #007bff; /* Azul vibrante, comum em temas esportivos */
+    color: #fff;
+    padding: 1rem 5%;
+    display: flex; /* Permite alinhar o logo e a navegação lado a lado */
+    justify-content: space-between; /* Espaço entre o logo e o menu */
+    align-items: center;
+    position: sticky; /* O header pode ficar fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+
+.navbar ul {
+    list-style: none; /* Remove os marcadores de lista */
+    display: flex; /* Alinha os itens da navegação horizontalmente */
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Estilizando o botão de Login/Cadastro (destaque) */
+.navbar .btn-login {
+    background-color: #ffc107; /* Amarelo/Dourado para destaque */
+    color: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.navbar .btn-login:hover {
+    background-color: #e0a800;
+}
+
+/* 3. ESTILIZAÇÃO DO MAIN (Conteúdo Principal) */
+main {
+    padding: 20px 5%;
+    min-height: 80vh; /* Garante que o conteúdo ocupe a maior parte da tela */
+}
+
+/* 4. ESTILIZAÇÃO DO FOOTER (Rodapé) */
+footer {
+    /* Requisito: Rodapé com copyright nome do dono do projeto, programador do site e ano [cite: 12] */
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* style.css (continuação) */
+
+/* 5. ESTILIZAÇÃO DO BANNER PRINCIPAL (HOME) */
+.banner {
+    /* Requisito Home: Um banner grande com imagem ilustrativa */
+    background: url('caminho/para/imagem-banner.jpg') no-repeat center center/cover;
+    height: 400px; /* Altura generosa para o banner */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.5rem;
+}
+
+/* 6. ESTILIZAÇÃO DA SEÇÃO DE PRODUTOS EM DESTAQUE */
+.produtos-destaque {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.produtos-destaque h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+/* Layout em Grid para exibir os produtos */
+.produtos-grid {
+    display: grid;
+    /* Cria 3 colunas de tamanho igual. Ajuste para responsividade (Media Queries) */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.produto-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.produto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.produto-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.produto-card .valor {
+    font-size: 1.4rem;
+    color: #dc3545; /* Cor vermelha para destacar o preço */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.produto-card .btn-carrinho {
+    /* Estilo para o botão "Adicionar ao Carrinho" */
+    background-color: #28a745; /* Verde para ação de compra */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.produto-card .btn-carrinho:hover {
+    background-color: #218838;
+}
