@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artsport - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Artsport</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html" class="btn-login">Login / Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+        <div class="login-container">
+            <h2>Tela de Entrar</h2>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Entrar</button>
+            </form>
+
+            <p id="loginMessage" class="message"></p>
+
+            <div class="switch-auth">
+                <p>Ainda não tem conta?</p>
+                <a href="cadastro.html" class="btn-secondary">Cadastre-se</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Artsport. Todos os direitos reservados.</p>
+        <p>Owner: **Caio Cesar Assis Souza**</p>
+        <p>Developer: **Lucas Rodrigues de Magalhães**</p>

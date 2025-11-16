@@ -187,3 +187,28 @@ footer p {
 .produto-card .btn-carrinho:hover {
     background-color: #218838;
 }
+
+/* 7. ESTILIZAÇÃO PARA TELAS DE AUTENTICAÇÃO (Login e Cadastro) */
+.auth-page {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha no topo da área (pode mudar para 'center' se quiser centralização total) */
+    padding: 60px 5%;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limita a largura do formulário */
+    text-align: center;
+}
+
+.login-container h2 {
+    /* Requisito: Tela de “Entrar” */
+    margin-bottom: 25px;
+    color: #007bff;
+    font-size: 1.8rem;
+}
