@@ -1,0 +1,108 @@
+/* contato.css */
+
+/* 1. Estrutura da Página de Contato */
+.contato-page {
+    max-width: 900px;
+    margin: 0 auto; /* Centraliza o conteúdo da página */
+    padding: 40px 20px;
+}
+
+.contato-page h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+}
+
+.contato-page p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* 2. Informações de Contato (Canais Diretos) */
+.contato-info {
+    /* Destaca as informações de contato solicitadas (Email, Telefone, WhatsApp) */
+    background-color: #e9f5ff; /* Fundo azul claro para destaque */
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border-left: 5px solid #007bff;
+}
+
+.contato-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contato-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contato-info ul li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contato-info ul li a {
+    color: #007bff;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.contato-info ul li a:hover {
+    color: #0056b3;
+}
+
+/* 3. Formulário de Feedback */
+.contato-formulario {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contato-formulario h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+}
+
+/* Reutilização e estilização do TextArea */
+.contato-formulario .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contato-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contato-formulario textarea {
+    /* Requisito: TextArea com botão de enviar */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 1rem;
+    font-family: sans-serif;
+    transition: border-color 0.3s;
+}
+
+.contato-formulario textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo do botão de envio (Reutiliza classe do style.css/login.css) */
+.contato-formulario .btn-primary {
+    width: 100%;
+}

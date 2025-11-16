@@ -94,28 +94,36 @@ footer p {
 /* style.css (continuação) */
 
 /* 5. ESTILIZAÇÃO DO BANNER PRINCIPAL (HOME) */
+/* style.css (Refinamento do Banner) */
+
 .banner {
-    /* Requisito Home: Um banner grande com imagem ilustrativa */
-    background: url('caminho/para/imagem-banner.jpg') no-repeat center center/cover;
-    height: 400px; /* Altura generosa para o banner */
+    /* Mantenha o background: url(...) se tiver uma imagem real */
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); /* Gradiente azul forte */
+    color: #fff; /* Texto branco */
+    height: 450px; /* Aumenta a altura para mais impacto */
+    
+    /* Centralização do Conteúdo (mantém) */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin-bottom: 40px;
-    border-radius: 8px;
+    
+    margin-bottom: 50px;
+    border-radius: 12px; /* Cantos mais arredondados */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .banner h2 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem; /* Aumenta o tamanho da fonte */
+    margin-bottom: 15px;
+    font-weight: 700; /* Mais negrito */
+    letter-spacing: 2px; /* Espaçamento entre letras */
 }
 
 .banner p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    opacity: 0.9; /* Deixa o subtítulo levemente mais suave */
 }
 
 /* 6. ESTILIZAÇÃO DA SEÇÃO DE PRODUTOS EM DESTAQUE */
@@ -125,9 +133,17 @@ footer p {
 }
 
 .produtos-destaque h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #007bff;
+    font-size: 2.5rem; /* Aumenta um pouco */
+    color: #333; /* Cor escura */
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    
+    /* Adiciona uma linha decorativa por baixo */
+    border-bottom: 3px solid #ffc107; /* Amarelo/Dourado como no botão de login */
+    display: inline-block; /* Faz a linha se ajustar ao tamanho do texto */
+    padding-left: 20px; /* Espaçamento interno */
+    padding-right: 20px;
+    font-weight: 600;
 }
 
 /* Layout em Grid para exibir os produtos */
@@ -137,19 +153,21 @@ footer p {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
-.produto-card {
+/* style.css (Refinamento do Card de Produto) */
 
+.produto-card {
+    /* Mantém a estrutura base */
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.3s;
     text-align: center;
 }
 
 .produto-card:hover {
-    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px) scale(1.02); /* Eleva mais e aumenta levemente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .produto-card img {
@@ -212,3 +230,180 @@ footer p {
     color: #007bff;
     font-size: 1.8rem;
 }
+
+/* Estilização dos grupos de formulário */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block; /* Garante que o rótulo ocupe sua própria linha */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo para botões primários (Entrar) */
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para mensagens de feedback (sucesso ou erro) */
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Estilo para a mensagem de sucesso (exemplo) */
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* style.css (Adicione ao final ou na seção de navegação) */
+
+.cart-badge {
+    background-color: #ffc107; /* Amarelo/Dourado de destaque */
+    color: #333;
+    border-radius: 50%; /* Torna o elemento um círculo */
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 5px;
+    display: inline-block;
+    min-width: 20px; /* Garante que o círculo não se achate com números maiores */
+    text-align: center;
+}
+
+/* style.css (Ajuste da estrutura do Card) */
+
+.produto-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    
+    /* Novo: Altura mínima para padronizar o visual */
+    min-height: 400px; 
+    display: flex; /* Usamos flex para organizar o conteúdo verticalmente */
+    flex-direction: column;
+    justify-content: space-between; /* Empurra o botão para baixo */
+}
+
+.produto-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* style.css (Ajuste da Imagem e Título) */
+
+.produto-card img {
+    max-width: 100%;
+    /* Novo: Altura máxima para evitar imagens muito longas */
+    max-height: 200px; 
+    width: auto;
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.produto-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+    /* Novo: Garante que o título não fique muito grande */
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    min-height: 2.4rem; /* Reserva espaço para duas linhas de texto */
+}
+
+/* style.css (Ajuste do Preço e Botão) */
+
+.produto-card .valor {
+    font-size: 1.6rem; /* Aumenta o tamanho para destaque */
+    color: #dc3545; /* Cor vermelha vibrante */
+    font-weight: 700; /* Mais negrito */
+    margin: 15px 0 20px 0;
+    flex-grow: 1; /* Novo: Empurra o preço e, consequentemente, o botão para baixo */
+}
+
+.produto-card .btn-carrinho {
+    /* Cor verde para ação de compra */
+    background-color: #28a745; 
+    color: #fff;
+    border: none;
+    padding: 12px 25px; /* Botão maior */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%; /* Novo: Ocupa a largura total do card */
+    transition: background-color 0.3s;
+}
+
+.produto-card .btn-carrinho:hover {
+    background-color: #218838;
+}
+
+/* style.css (Nova seção para Notificações/Toast) */
+
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2000; /* Garante que fique acima de tudo */
+    pointer-events: none; /* Permite clicar através do container */
+}
+
+.toast {
+    background-color: #28a745; /* Verde de sucesso */
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s;
+    transform: translateY(100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    pointer-events: auto;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+

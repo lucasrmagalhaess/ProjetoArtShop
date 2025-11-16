@@ -1,0 +1,233 @@
+/* carrinho.css */
+
+/* 1. Layout Geral da Página do Carrinho */
+.carrinho-page {
+    display: flex;
+    justify-content: center;
+    padding: 40px 5%;
+    min-height: 70vh;
+}
+
+.carrinho-content {
+    display: flex;
+    gap: 40px; /* Espaçamento entre a lista de itens e o resumo */
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* 2. Container da Lista de Itens */
+.carrinho-items {
+    flex: 2; /* Ocupa 2/3 da largura */
+}
+
+/* 3. Estilização do Card de Item Individual */
+.item-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.item-card img {
+    width: 80px; /* Tamanho fixo para as fotos */
+    height: 80px;
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer, mantendo a proporção */
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.item-info {
+    flex-grow: 1; /* Ocupa o espaço restante */
+}
+
+.item-info h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.item-info p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.item-info .btn-remover {
+    background-color: #dc3545; /* Vermelho para ação de remoção */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.item-info .btn-remover:hover {
+    background-color: #c82333;
+}
+
+/* 4. Resumo da Compra e Checkout */
+.carrinho-resumo {
+    flex: 1; /* Ocupa 1/3 da largura */
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    height: fit-content; /* Se ajusta ao conteúdo */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+.carrinho-resumo h3,
+.carrinho-resumo h4 {
+    color: #007bff;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+}
+
+/* Alinhamento dos valores */
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.resumo-linha.total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745; /* Verde para destacar o total */
+    border-top: 1px dashed #ccc;
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+/* Estilização do Formulário de Checkout (reutiliza classes do login.css ou style.css) */
+.carrinho-resumo .form-group {
+    margin-bottom: 15px;
+}
+
+.carrinho-resumo .btn-primary {
+    /* Ajusta o botão principal de finalizar compra */
+    margin-top: 20px;
+    background-color: #28a745;
+}
+
+.carrinho-resumo .btn-primary:hover {
+    background-color: #218838;
+}
+
+/* No seu carrinho.css ou style.css */
+.carrinho-content {
+    display: flex; /* ATIVA o alinhamento horizontal */
+    gap: 40px; 
+    width: 100%;
+    max-width: 1200px;
+}
+
+.carrinho-items {
+    flex: 2; /* Ocupa a maior parte da tela (Ex: 2 partes) */
+}
+
+.carrinho-resumo {
+    flex: 1; /* Ocupa uma parte (Ex: 1 parte) */
+    height: fit-content; /* Importante para o resumo não ir até o final da página */
+}
+
+/* No seu carrinho.css */
+.item-card {
+    display: flex; /* Alinha o conteúdo interno (imagem e info) horizontalmente */
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+/* 3. Correção do Tamanho da Imagem */
+.item-card img {
+    width: 80px; /* Tamanho fixo para as fotos */
+    height: 80px;
+    object-fit: contain; /* Ajusta a imagem sem distorcer e sem estourar o container */
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+/* carrinho.css (Estilização da área de Dados de Entrega e Pagamento) */
+
+/* 1. Alinhamento Vertical dos Elementos */
+.carrinho-resumo form label {
+    /* CRUCIAL: Faz a label ocupar a largura total, forçando o input a ir para a próxima linha */
+    display: block; 
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+/* 2. Estilização e Largura dos Campos */
+.carrinho-resumo form input[type="text"] {
+    width: 100%; /* Faz os campos ocuparem a largura total */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não aumente o width total */
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.carrinho-resumo form input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 3. Estilização do Título da Seção */
+.carrinho-resumo form h4 {
+    color: #007bff;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* 4. Ajuste do Botão */
+#checkoutForm .btn-primary {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    padding: 12px;
+}
+
+/* carrinho.css */
+
+/* Estilização do Card de Item Individual */
+.item-card {
+    display: flex;
+    align-items: center;
+    /* ... (outras regras) ... */
+}
+
+.item-card img {
+    /* Garante que a imagem tenha um tamanho fixo e uniforme */
+    width: 80px; 
+    height: 80px;
+    object-fit: contain; 
+    border: 1px solid #eee; /* Adiciona uma borda sutil ao redor do espaço da imagem */
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+/* Opcional: Se quiser que o nome do item no item-info seja menor e mais próximo do preço */
+.item-info h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}

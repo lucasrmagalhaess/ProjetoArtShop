@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtSports - Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>ArtSports</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho <span id="cart-count" class="cart-badge">0</span></a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html" class="btn-login">Login / Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contato-page">
+            <h2>Fale Conosco</h2>
+            <p>Utilize os canais abaixo para entrar em contato ou utilize nosso formulário para enviar observações e reclamações.</p>
+
+            <div class="contato-info">
+                <h3>Canais Diretos</h3>
+                <ul>
+                    <li>📧 **Email:** <a href="mailto:contato@artsport.com.br">contato@artsport.com.br</a></li>
+                    <li>📞 **Telefone:** (11) 5555-1234</li>
+                    <li>📱 **WhatsApp:** (11) 98765-4321</li>
+                </ul>
+            </div>
+
+            <div class="contato-formulario">
+                <h3>Envie sua Mensagem</h3>
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" id="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Seu Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem (Reclamação ou Observação):</label>
+                        <textarea id="mensagem" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+
+                <p id="feedbackMessage" class="message"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Artsport. Todos os direitos reservados.</p>
+
+        </footer>
+        </body>
+        <div id="toast-container"></div>
+        </html>

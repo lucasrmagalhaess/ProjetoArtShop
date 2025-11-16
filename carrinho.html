@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtSports - Carrinho de Compras</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="carrinho.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Artsport</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="carrinho.html">Carrinho <span id="cart-count" class="cart-badge">0</span></a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="login.html" class="btn-login">Login / Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carrinho-page">
+            <h2>Seu Carrinho de Compras</h2>
+
+            <div class="carrinho-content">
+                
+                <div class="carrinho-items">
+                    </div>
+
+                <div class="carrinho-resumo">
+                    <h3>Resumo da Compra</h3>
+                    
+                    <div class="resumo-linha">
+                        <p>Subtotal:</p>
+                        <p id="subtotal">R$ 0,00</p> 
+                    </div>
+                    <div class="resumo-linha total">
+                        <p>Total (a ser simulado):</p>
+                        <p id="valorTotal">R$ 0,00</p>
+                    </div>
+
+                    <form id="checkoutForm">
+                        <h4>Dados de Entrega e Pagamento (Simulação)</h4>
+
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" required placeholder="Ex: 00000-000">
+
+                        <label for="address">Rua/Logradouro:</label>
+                        <input type="text" id="address" required placeholder="Rua, Bairro, Cidade (Preenchimento Automático)"> 
+
+                        <label for="number">Número:</label>
+                        <input type="text" id="number" required placeholder="Nº da Casa"> 
+
+                        <label for="complement">Complemento (Opcional):</label>
+                        <input type="text" id="complement" placeholder="Ex: Apto 101, Bloco B">
+                        
+                        <label for="cardNumber">Número do Cartão:</label>
+                        <input type="text" id="cardNumber" required placeholder="XXXX XXXX XXXX XXXX">
+
+                        <div id="confirmMessage" class="message"></div>
+                        
+                        <button type="submit" class="btn-checkout btn-primary">Finalizar Compra</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Artsport.</p>
+    </footer>
+
+    <div id="toast-container"></div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

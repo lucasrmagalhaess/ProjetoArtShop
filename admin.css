@@ -1,0 +1,87 @@
+/* admin.css */
+
+/* 1. Estrutura e Container Central */
+body {
+    background-color: #f0f2f5; /* Fundo levemente acinzentado */
+}
+
+.admin-panel {
+    padding: 40px 5%;
+    min-height: 80vh;
+}
+
+.admin-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.admin-container h2 {
+    color: #007bff;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.admin-container p {
+    color: #6c757d; /* Cinza suave */
+    margin-bottom: 30px;
+}
+
+/* 2. Dashboard de Ações Rápidas */
+.admin-dashboard {
+    background-color: #e9f5ff; /* Fundo azul claro para destaque */
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.admin-dashboard h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.admin-dashboard ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-dashboard ul li {
+    margin-bottom: 15px;
+}
+
+.admin-dashboard ul li a {
+    color: #333;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px;
+    display: block; /* Ocupa a largura total para ser clicável */
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.admin-dashboard ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* 3. Estilização do Botão de Logoff */
+.admin-container .btn-primary {
+    /* Reutiliza o estilo base, mas ajusta a cor para indicar "sair" */
+    background-color: #dc3545; /* Vermelho para Logoff */
+    border: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.admin-container .btn-primary:hover {
+    background-color: #c82333;
+}
