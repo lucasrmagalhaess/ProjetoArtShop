@@ -23,7 +23,7 @@ a {
 header {
     background: #007bff;
     color: #fff;
-    padding: 10px 5%;
+    padding: 10px 5%; /* Compacto */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +41,7 @@ header {
 }
 
 .logo img {
-    height: 50px; 
+    height: 50px; /* Tamanho da Logo */
     width: auto;
     display: block;
 }
@@ -76,24 +76,6 @@ header {
 
 .navbar .btn-login:hover {
     background-color: #e0a800;
-}
-
-/* style.css (Adicionar na seção 7 ou próximo aos estilos de .login-container) */
-
-.forgot-password-link {
-    text-align: right; /* Alinha o link à direita do contêiner */
-    margin-top: -10px; /* Reduz o espaço acima para aproximar da senha */
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-}
-
-.forgot-password-link a {
-    color: #007bff; /* Usa a cor primária do projeto */
-    text-decoration: underline; /* Adiciona sublinhado para indicar que é um link */
-}
-
-.forgot-password-link a:hover {
-    color: #0056b3;
 }
 
 /* 3. ESTILIZAÇÃO DO MAIN (Conteúdo Principal) */
@@ -332,6 +314,24 @@ footer p {
     background-color: #0056b3;
 }
 
+/* Link Esqueci a Senha */
+.forgot-password-link {
+    text-align: right; 
+    margin-top: -10px; 
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.forgot-password-link a {
+    color: #007bff; 
+    text-decoration: underline; 
+}
+
+.forgot-password-link a:hover {
+    color: #0056b3;
+}
+
+
 /* Estilo para mensagens de feedback (sucesso ou erro) */
 .message {
     margin-top: 15px;
@@ -390,4 +390,120 @@ footer p {
     transform: translateY(0);
 }
 
-/* 9. MEDIA QUERIES PARA RESPONSIVIDADE (A ser adicionado aqui) */
+
+/* Estilos para o Carrinho (Controles de Quantidade) */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.item-quantity {
+    font-weight: bold;
+    min-width: 20px; 
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.btn-qty-change {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-qty-change:hover {
+    background-color: #e2e6ea;
+}
+
+.btn-remove-full {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-remove-full:hover {
+    background-color: #c82333;
+}
+
+
+/* ================================================= */
+/* 9. MEDIA QUERIES PARA RESPONSIVIDADE (MOBILE FIRST) */
+/* ================================================= */
+
+@media screen and (max-width: 768px) {
+    
+    /* Header: Ajuste para Telas Pequenas */
+    header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 5%;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+    
+    .navbar ul {
+        flex-direction: column; 
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .navbar ul li {
+        margin: 5px 0;
+        width: 100%;
+    }
+    
+    .navbar ul li a {
+        display: block; 
+    }
+    
+    /* Grid de Produtos: Muda de múltiplas colunas para 1 */
+    .produtos-grid {
+        grid-template-columns: 1fr; /* Apenas uma coluna por linha */
+    }
+
+    /* Carrinho: Empilha os containers */
+    .carrinho-content {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    
+    .carrinho-resumo {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    /* Cards de Produto */
+    .produto-card {
+        min-height: 350px;
+    }
+
+    /* Banner */
+    .banner {
+        height: 300px;
+    }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
+}
