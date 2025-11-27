@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artsport - Login</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="login.css">
-</head>
+    <link rel="stylesheet" href="../css/style.css">
+    </head>
 <body>
 
     <header>
         <div class="logo">
-            <h1>Artsport</h1>
+            <h1>ArtSports</h1>
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="carrinho.html">Carrinho <span id="cart-count" class="cart-badge">0</span></a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="login.html" class="btn-login">Login / Cadastro</a></li>
+                <li><a href="../html/index.html">Início</a></li>
+                <li><a href="../html/produtos.html">Produtos</a></li>
+                <li><a href="../html/carrinho.html">Carrinho <span id="cart-count" class="cart-badge">0</span></a></li>
+                <li><a href="../html/contato.html">Contato</a></li>
+                <li><a href="../html/login.html" class="btn-login">Login / Cadastro</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="auth-page">
         <div class="login-container">
-            <h2>Tela de Entrar</h2>
+            <h2>Realize o Login</h2>
             
             <form id="loginForm">
                 <div class="form-group">
@@ -39,6 +38,10 @@
                     <input type="password" id="password" name="password" required>
                 </div>
                 
+                <div class="forgot-password-link">
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+                
                 <button type="submit" class="btn-primary">Entrar</button>
             </form>
 
@@ -46,17 +49,18 @@
 
             <div class="switch-auth">
                 <p>Ainda não tem conta?</p>
-                <a href="cadastro.html" class="btn-secondary">Cadastre-se</a>
+                <a href="../html/cadastro.html" class="btn-secondary"><b>Cadastre-se</b></a>
             </div>
         </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Artsport. Todos os direitos reservados.</p>
+    </footer>
 
-</footer>
-        <script src="script.js"></script>
+    <script src="../assets/script.js"></script>
+    
+    <div id="toast-container"></div>
+
 </body>
-<div id="toast-container"></div>
-
-    </html>
+</html>

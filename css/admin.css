@@ -74,7 +74,6 @@ body {
 
 /* 3. Estilização do Botão de Logoff */
 .admin-container .btn-primary {
-    /* Reutiliza o estilo base, mas ajusta a cor para indicar "sair" */
     background-color: #dc3545; /* Vermelho para Logoff */
     border: none;
     padding: 10px 30px;
@@ -84,4 +83,33 @@ body {
 
 .admin-container .btn-primary:hover {
     background-color: #c82333;
+}
+
+/* NOVO: Estilo para Logs e Tabelas */
+.admin-log-section {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.admin-log-section h3 {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #eee;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.admin-table th {
+    background-color: #f8f8f8;
 }

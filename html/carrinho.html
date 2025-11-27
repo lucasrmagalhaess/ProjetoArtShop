@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtSports - Carrinho de Compras</title>
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="carrinho.css">
-
+    <title>Artsport - Carrinho de Compras</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/carrinho.css">
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <h1>Artsport</h1>
+            <h1>ArtSports</h1>
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="carrinho.html">Carrinho <span id="cart-count" class="cart-badge">0</span></a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="login.html" class="btn-login">Login / Cadastro</a></li>
+                <li><a href="../html/index.html">Início</a></li>
+                <li><a href="../html/produtos.html">Produtos</a></li>
+                <li><a href="../html/carrinho.html">Carrinho <span id="cart-count" class="cart-badge">0</span></a></li>
+                <li><a href="../html/contato.html">Contato</a></li>
+                <li><a href="../html/login.html" class="btn-login">Login / Cadastro</a></li>
             </ul>
         </nav>
     </header>
@@ -42,13 +41,27 @@
                         <p id="subtotal">R$ 0,00</p> 
                     </div>
                     <div class="resumo-linha total">
-                        <p>Total (a ser simulado):</p>
+                        <p>Total:</p>
                         <p id="valorTotal">R$ 0,00</p>
                     </div>
 
                     <form id="checkoutForm">
                         <h4>Dados de Entrega e Pagamento (Simulação)</h4>
+                        
+                        <label for="paymentMethod">Método de Pagamento:</label>
+                        <select id="paymentMethod" required>
+                            <option value="">Selecione...</option>
+                            <option value="credit">Cartão de Crédito</option>
+                            <option value="pix">Pix (Pagamento Imediato)</option>
+                            <option value="boleto">Boleto (3 dias)</option>
+                        </select>
 
+                        <div id="installmentsGroup" style="display: none;">
+                            <label for="installments">Parcelamento:</label>
+                            <select id="installments">
+                                </select>
+                        </div>
+                        
                         <label for="cep">CEP:</label>
                         <input type="text" id="cep" required placeholder="Ex: 00000-000">
 
@@ -74,12 +87,13 @@
     </main>
     
     <footer>
-        <p>&copy; 2025 Artsport.</p>
+        <p>&copy; 2025 Artsport. Owner: Caio Cesar Assis Souza | Developer: Lucas Rodrigues de Magalhães</p>
     </footer>
 
     <div id="toast-container"></div>
     
-    <script src="script.js"></script>
+    <script src="../assets/script.js"></script> 
+    <script src="../assets/carrinho.js"></script> 
 
 </body>
 </html>

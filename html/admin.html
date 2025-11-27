@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artsport - Painel de Administrador</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="admin.css"> 
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css"> 
 </head>
 <body>
 
@@ -15,14 +15,11 @@
         </div>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="carrinho.html">Carrinho <span id="cart-count" class="cart-badge">0</span></a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="login.html" class="btn-login">Sair</a></li> 
-
-                <link rel="stylesheet" href="style.css"> 
-                <link rel="stylesheet" href="admin.css">
+                <li><a href="../html/index.html">Início</a></li>
+                <li><a href="../html/produtos.html">Produtos</a></li>
+                <li><a href="../html/carrinho.html">Carrinho <span id="cart-count" class="cart-badge">0</span></a></li>
+                <li><a href="../html/contato.html">Contato</a></li>
+                <li><a href="../html/login.html" class="btn-login">Sair</a></li> 
             </ul>
         </nav>
     </header>
@@ -35,11 +32,23 @@
             <div class="admin-dashboard">
                 <h3>Ações Rápidas (Simulação)</h3>
                 <ul>
+                    <li><a href="#" id="addProductLink">Adicionar Novo Produto (Simulação)</a></li>
+                    
                     <li><a href="#">Gerenciar Pedidos (12 Novos)</a></li>
                     <li><a href="#">Editar Catálogo de Produtos</a></li>
                     <li><a href="#">Visualizar Relatórios de Vendas</a></li>
                     <li><a href="#">Moderar Comentários</a></li>
                 </ul>
+            </div>
+            
+            <div class="admin-log-section">
+                <h3>Contas Registradas e Logins</h3>
+                
+                <div id="registeredUsersContainer">
+                    </div>
+                
+                <div id="loginLogContainer" style="margin-top: 30px;">
+                    </div>
             </div>
             
             <button class="btn-primary" onclick="alert('Simulação de Logoff'); window.location.href='index.html';">
@@ -49,12 +58,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Artsport. Todos os direitos reservados.</p>
-        <p>Owner: **Caio Cesar Assis Souza** </p>
-       <p>Developer: **Lucas Rodrigues de Magalhães**</p>
-        <p>Projeto de Programação Web.</p>
+        <p>&copy; 2025 Artsport. Todos os direitos reservados. Owner: Caio Cesar Assis Souza | Developer: Lucas Rodrigues de Magalhães</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../assets/script.js"></script> 
+    <script src="../assets/admin.js"></script> 
 </body>
 </html>
